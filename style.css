@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --gold-primary: #D4AF37;
+  --gold-light: #F1D77A;
+  --gold-dark: #8C6A1A;
+
+  --black-main: #0A0A0A;
+  --black-soft: #121212;
+
+  --white-main: #FFFFFF;
+  --white-soft: #E5E5E5;
+}
+
+body{
+    background: var(--black-main);
+    color: var(--white-main);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔥 HEADER ACIMA DE TUDO */
+header{
+    position: relative;
+    z-index: 9999;
+}
+
+.logo img{
+    max-width: 90px;
+}
+
+.menu{
+    display: flex;
+    padding: 20px 32px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* importante */
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.navbar ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white-main);
+    font-size: 12px;
+    transition: .2s;
+}
+
+.navbar ul li a:hover{
+    transform: scale(1.05);
+    color: var(--gold-dark);
+}
+
+/* ⚠️ mantive como você fez */
+.btn-contacto button{
+    padding: 15px 20px;
+    background: var(--gold-primary);
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: .2s;
+}
+
+.btn-contacto button:hover{
+    background: var(--gold-dark);
+    transform: scale(1.05);
+}
+
+button a{
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--white-main);
+}
+
+button a:hover{
+    color: var(--black-soft);
+}
+
+/* HERO */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/fundo.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1; /* 🔥 garante que fica atrás */
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+.hero-content{
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h1{
+    font-size: 38px;
+    color: var(--gold-primary);
+}
+
+.btn-hero a{
+    display: inline-block;
+    padding: 12px 25px;
+    background: var(--gold-dark);
+    text-decoration: none;
+    color: var(--white-soft);
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.btn-hero a:hover{
+    color: var(--black-soft);
+    transform: scale(1.05);
+}
+
+/* ABOUT */
+.about{
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 32px;
+}
+
+.img-about{
+    display: block;
+    max-width: 250px;
+    margin: 30px auto;
+    border: 4px solid var(--gold-primary);
+    border-radius: 15px;
+    transition: .2s;
+}
+
+.img-about:hover{
+    box-shadow: 12px 7px 20px var(--gold-light);
+    transform: scale(1.05);
+}
+
+.about-content h1{
+    text-align: center;
+    color: var(--gold-primary);
+}
+
+.about-content p{
+    text-align: justify;
+    max-width: 900px;
+}
+
+/* SOCIAL */
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social i{
+    font-size: 40px;
+    color: var(--gold-light);
+    transition: .2s;
+}
+
+.social i:hover{
+    transform: scale(1.05);
+    color:var(--gold-dark)
+}
+
+/* FORM */
+.Contacto{
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.content-form{
+    max-width: 450px;
+    padding: 2rem;
+    border: 2px solid var(--gold-dark);
+    border-radius: 12px;
+}
+
+.content-form input{
+    width: 100%;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid var(--black-main);
+    margin-bottom: 1rem;
+}
+
+.content-form h1{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--gold-primary);
+}
+
+.content-form input:focus{
+    outline: none;
+}
+
+.button-in {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    font-weight: bold;
+    color: var(--white-main);
+    background: var(--gold-primary);
+}
+
+/* SKILLS */
+.skills{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.container-skills{
+    width: 900px;
+    padding: 60px;
+    border-radius: 60px;
+    box-shadow: 2px 14px 45px var(--gold-primary);
+    backdrop-filter: blur(60px);
+}
+
+.circle{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(5px);
+}
+
+.circle-1{
+    top: -5%;
+    right:3%;
+    background: linear-gradient(to right, var(--gold-light), var(--gold-dark));
+}
+
+.circle-2{
+    bottom: -5%;
+    left:3%;
+    background: linear-gradient(to right, var(--gold-dark), var(--white-soft));
+}
+
+.container-skills .skills-head{
+    width: 100%;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.skills-head h2{
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.skills-head h2 span{
+    color: var(--gold-primary);
+    font-weight: 700;
+}
+
+.skill-main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px 60px;
+}
+
+.skill-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar .info p{
+    font-size: 16px;
+    opacity: .8;
+}
+
+/* 🔥 BARRA BASE */
+.skill-bar .bar{
+    width: 100%;
+    height: 12px;
+    background-color: #222;
+    border-radius: 25px;
+    margin-top: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 🔥 BARRA INTERNA */
+.skill-bar .bar span{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    background: linear-gradient(to right, var(--gold-dark), var(--gold-primary));
+    animation: load 1.5s ease-in-out;
+}
+
+/* 🔥 PORCENTAGENS */
+.skill-bar .bar .html{ width: 90%; }
+.skill-bar .bar .css{ width: 90%; }
+.skill-bar .bar .js{ width: 80%; }
+.skill-bar .bar .php{ width: 75%; }
+.skill-bar .bar .node{ width: 65%; }
+.skill-bar .bar .react{ width: 65%; }
+.skill-bar .bar .sql{ width: 95%; }
+.skill-bar .bar .express{ width: 50%; }
+footer{
+    padding: 3rem;
+}
+footer p{
+    text-align: center;
+}
+/* 🔥 ANIMAÇÃO */
+@keyframes load {
+    from {
+        width: 0;
+    }
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px){
+
+    .skills{
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .container-skills{
+        width: 100%;
+        padding: 30px;
+        border-radius: 30px;
+    }
+
+    .skill-main{
+        grid-template-columns: 1fr;
+    }
+
+    .skills-head h2{
+        font-size: 28px;
+    }
+
+    .skill-bar .info p{
+        font-size: 14px;
+    }
+}
+
+/* MENU HAMBURGUER */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 10001;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        background: var(--black-soft);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 220px;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 10000;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .btn-contacto {
+        display: none;
+    }
+
+    /* 🔥 corrige bug do parallax no mobile */
+    .hero {
+        background-attachment: scroll;
+        height: 80vh;
+    }
+}
